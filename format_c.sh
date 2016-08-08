@@ -2,9 +2,9 @@
 #		
 # name:			format_c.sh
 # auth:			yshisx
-# date:			2016Äê8ÔÂ8ÈÕ 21:49:30
+# date:			2016å¹´8æœˆ8æ—¥ 21:49:30
 #	
-# function:	°´ÀàĞÍ¸ñÊ½»¯C´úÂë½Å±¾£¬ÒÀÀµÓÚindent¹¤¾ß
+# function:	æŒ‰ç±»å‹æ ¼å¼åŒ–Cä»£ç è„šæœ¬ï¼Œä¾èµ–äºindentå·¥å…·
 #
 #
 
@@ -21,7 +21,7 @@ if [ $# -ne 4 ]; then
 fi
 
 
-
+#å¯¹äº$optnameï¼Œå¯ä»¥ç”¨åæ ‡:æ¥è¡¨ç¤ºæ˜¯å¦éœ€è¦å€¼ï¼›è€Œå‰æ ‡:åˆ™è¡¨ç¤ºæ˜¯å¦å¼€å¯é™é»˜æ¨¡å¼ã€‚
 while getopts a:s: opt  
 do  
   case $opt in  
@@ -45,7 +45,7 @@ do
  	esac  
 done  
 
-#°´ÕÕLinuxµÄÓï·¨·Ö·ç¸ñ¸ñÊ½»¯´úÂë
+#æŒ‰ç…§Linuxçš„è¯­æ³•åˆ†é£æ ¼æ ¼å¼åŒ–ä»£ç 
 #if [ $STYLE = linux ]; then
 #	indent $FILENAME -npro -kr -i8 -ts8 -sob -l80 -ss -ncs -cp1
 #fi
@@ -53,12 +53,12 @@ done
 
 
 case $STYLE in
-#°´ÕÕLinuxµÄÓï·¨·Ö·ç¸ñ¸ñÊ½»¯´úÂë
+#æŒ‰ç…§Linuxçš„è¯­æ³•åˆ†é£æ ¼æ ¼å¼åŒ–ä»£ç 
 	linux)
 		echo "format code use the linux kernel style!"
 		indent $FILENAME -npro -kr -i8 -ts8 -sob -l80 -ss -ncs -cp1
 		;;
-#°´ÕÕgvµÄ´úÂë·ç¸ñ¸ñÊ½»¯´úÂë
+#æŒ‰ç…§gvçš„ä»£ç é£æ ¼æ ¼å¼åŒ–ä»£ç 
 	gv)
 		echo "format code use the gv style!"
 		;;
