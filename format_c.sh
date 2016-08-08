@@ -21,7 +21,7 @@ if [ $# -ne 4 ]; then
 fi
 
 
-#对于$optname，可以用后标:来表示是否需要值；而前标:则表示是否开启静默模式。
+#对于$opt，可以用后标:来表示是否需要值；而前标:则表示是否开启静默模式。
 while getopts a:s: opt  
 do  
   case $opt in  
