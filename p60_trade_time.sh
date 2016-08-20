@@ -1,10 +1,10 @@
 #!/bin/bash
 #		
 # name:			p60_trade_time.sh
-# auth:			wuw
-# date:			2016Äê8ÔÂ10ÈÕ 20:14:16
+# auth:			yshisx
+# date:			2016å¹´8æœˆ10æ—¥ 20:14:16
 #	
-# function:	p60½»Ò×Ê±¼äÍ³¼Æ
+# function:	p60äº¤æ˜“æ—¶é—´ç»Ÿè®¡
 #
 #
 usage()
@@ -21,14 +21,14 @@ path='.'
 log_date=$1
 cd $path
 dir=`pwd`
-echo "µ±Ç°Ä¿Â¼ÊÇ:$dir"
+echo "å½“å‰ç›®å½•æ˜¯:$dir"
 
 cd $log_date
 dir=`pwd`
-echo "µ±Ç°Ä¿Â¼ÊÇ:$dir"
+echo "å½“å‰ç›®å½•æ˜¯:$dir"
 tmp_file=ms.csv
-cat gb_log.txt | grep "µ±Ç°½»Ò×" | awk -F ¡¾ {'print $3}' | awk -F ¡¿ '{print $1}' > $tmp_file
-echo "¿ªÊ¼·ÖÎöÊ±¼ä: `date`"
+cat gb_log.txt | grep "å½“å‰äº¤æ˜“" | awk -F ã€ {'print $3}' | awk -F ã€‘ '{print $1}' > $tmp_file
+echo "å¼€å§‹åˆ†ææ—¶é—´: `date`"
 while read trade_time
 do
 	if(($trade_time <= 200))
@@ -55,12 +55,12 @@ do
 
 done < $tmp_file
 rm $tmp_file
-echo "½áÊø·ÖÎöÊ±¼ä: `date`"
-echo "½»Ò×Ê±¼ä: Ğ¡ÓÚ200 	: $trade_time_lt_200"
-echo "½»Ò×Ê±¼ä: 200 ~ 270 : $trade_time_200_270"
-echo "½»Ò×Ê±¼ä: 271 ~ 400 : $trade_time_271_400"
-echo "½»Ò×Ê±¼ä: 401 ~ 500 : $trade_time_401_500"
-echo "½»Ò×Ê±¼ä: 501 ~ 600 : $trade_time_501_600"
-echo "½»Ò×Ê±¼ä: ´óÓÚ600   : $trade_time_ge_600"
+echo "ç»“æŸåˆ†ææ—¶é—´: `date`"
+echo "äº¤æ˜“æ—¶é—´: å°äº200 	: $trade_time_lt_200"
+echo "äº¤æ˜“æ—¶é—´: 200 ~ 270 : $trade_time_200_270"
+echo "äº¤æ˜“æ—¶é—´: 271 ~ 400 : $trade_time_271_400"
+echo "äº¤æ˜“æ—¶é—´: 401 ~ 500 : $trade_time_401_500"
+echo "äº¤æ˜“æ—¶é—´: 501 ~ 600 : $trade_time_501_600"
+echo "äº¤æ˜“æ—¶é—´: å¤§äº600   : $trade_time_ge_600"
 
 
