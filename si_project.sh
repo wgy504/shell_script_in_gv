@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 #	
-# auth:	wuw
-#	data£º2016-1-28
-#	used£ºLinuxÄÚºËsi¹¤³Ì½¨Á¢£¬Êä³öµÄsi_project_load_list.txtÔÚsi¹¤³ÌÖĞÌí¼Ó
+#       auth:	yshisx
+#	dataï¼š2016-1-28
+#	usedï¼šLinuxå†…æ ¸siå·¥ç¨‹å»ºç«‹ï¼Œè¾“å‡ºçš„si_project_load_list.txtåœ¨siå·¥ç¨‹ä¸­æ·»åŠ 
 #
 #
 #
