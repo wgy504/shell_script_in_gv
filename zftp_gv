@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ftp -n -v -d $5<<!
+user $3 $4
+binary 
+put $1 $2/$1
+literal site chmod 755 $2/$1
+bye
+!
